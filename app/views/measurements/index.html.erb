@@ -1,0 +1,19 @@
+<% if user_signed_in? %>
+  <div class="header-right">
+     <li><%= "#{current_user.nickname}でログイン中" %></li>
+     <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
+
+<div class="container">
+
+  <div class="header-left">
+     <a href="#">血糖値測定</a>
+     <a href="#">食事記録</a>
+     <a href="#">服薬</a>
+  </div>
+
+  <% else %>
+     <p>ログインしていません</p>
+     <li><%= link_to 'ログイン', new_user_session_path %></li>
+     <li><%= link_to '新規登録', new_user_path %></li>
+  </div>
+<% end %>
