@@ -1,0 +1,15 @@
+ <%= form_with model: @meal_record, class: 'new_meal_record', local: true do |f| %>
+    <div class="form-input">
+      <%= f.date_field :date %>
+      <%= f.select :meal_as, ['朝食', '昼食', '夕食', '間食'], {include_blank: '---'} %>
+      <%= f.text_field :content, placeholder: 'コメント' %>
+      <span class="image-file">画像</span>
+      <%= f.file_field :image, class: 'meal_image' %>
+    </div>
+  <%= f.submit '保存', class: 'form-submit' %>
+   <%# <div id="image-list"></div> %>
+  <% end %>
+
+<%# <div class="meal_records"> 
+  <%= render partial: 'content' %>
+<%# </div> %> 

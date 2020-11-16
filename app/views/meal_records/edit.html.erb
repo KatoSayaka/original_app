@@ -1,0 +1,7 @@
+<h3>食事記録</h3><%= button_to '戻る', root_path, method: :get %>
+
+   <h4 class="page-heading">編集</h4>
+
+   <%= render partial: "form", locals: { meal_recodr: @meal_record } %>
+
+   <%= link_to "削除する", meal_record_path(@meal_record), method: :delete, class: :meal_record_btn %>

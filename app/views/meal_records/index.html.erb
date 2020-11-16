@@ -1,0 +1,16 @@
+<h3>食事記録</h3><%= button_to '戻る', root_path, method: :get %>
+<%= button_to '記録する', new_meal_record_path, method: :get %>
+  <div class="meal_records"> 
+     <% @meal_records.each do |meal_record| %>
+       <%= meal_record.date %>
+       <%= meal_record.meal_as %>
+      <p class="meal_record_comment">
+       <%= meal_record.content %>
+      </p>
+      <div class="meal_image">
+      <% if meal_record.image.attached? %>
+       <%= link_to image_tag(meal_record.image.variant(resize: "200x200")), edit_meal_record_path(meal_record) %>
+      <% end %>
+      </div>
+     <% end %>
+  </div>

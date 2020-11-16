@@ -6,4 +6,5 @@ Rails.application.routes.draw do
    root 'measurements#index'
    resources :users, only: [:new] 
    resources :measurements, only: [:new, :create]
+   resources :meal_records, only: [:index, :new, :create, :edit, :update, :destroy]
 end
