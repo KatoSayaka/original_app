@@ -1,4 +1,5 @@
 class MealRecordsController < ApplicationController
+  before_action :authenticate_user!, except:[:index]
 
   def new
     @meal_record = MealRecord.new
@@ -11,7 +12,7 @@ class MealRecordsController < ApplicationController
   def create
     @meal_record = MealRecord.new(meal_record_params)
     if @meal_record.save
-      redirect_to meal_records_path  #再考予定
+      redirect_to meal_records_path 
     else
       render :new
     end

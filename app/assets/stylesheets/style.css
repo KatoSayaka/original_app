@@ -17,7 +17,7 @@
 .topbar_nav_status{
   list-style: none;
   font-size: 15px;
-  margin: 0 0 0 auto ;
+  /* margin: 0 0 0 auto ; */
   /* display: flex; */
   justify-content: flex-end;
   color: #444444;
@@ -27,7 +27,7 @@
 .topbar_nav_login{
   list-style: none;
   font-size: 15px;
-  margin: 0 0 0 auto;
+  /* margin: 0 0 0 auto; */
   /* display: flex; */
   /* justify-content: flex-end; */
   color: #444444;
@@ -37,10 +37,18 @@
 .topbar_nav_signin{
   list-style: none;
   font-size: 15px;
-  margin : 0 0 0 auto;
-  /* display: flex;
-  justify-content: flex-end; */
+  /* margin : 0 0 0 auto; */
+  /* /* display: flex; */
+  /* justify-content: flex-end; */
   color: #444444;
-  display: inline-block;
+  display: inline-block; 
 }
 
+.nav_btn{
+  margin: 7px 0 0 0;
+  background-color: #FFFFBB ;
+  text-align: center;
+  font-size: 15px;
+  border-radius: 6px;
+}
+ 
