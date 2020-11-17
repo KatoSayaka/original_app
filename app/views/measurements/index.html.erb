@@ -1,18 +1,13 @@
-<% if user_signed_in? %>
-  <div class="header">
-     <li><%= "#{current_user.nickname}でログイン中" %></li>
-     <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
-  </div>
-<div class="container">
-  <div class="sidebar">
-     <%= link_to '血糖値測定', new_measurement_path %>
-     <%= link_to  '食事記録', meal_records_path %>
-     <%= link_to  '服薬', "#" %>
-  </div>
 
-  <% else %>
-     <p>ログインしていません</p>
-     <li><%= link_to 'ログイン', new_user_session_path %></li>
-     <li><%= link_to '新規登録', new_user_registration_path %></li>
-  </div>
-<% end %>
+
+<div class="sidebar">
+  <div class="sidebar_nav">
+    <%= link_to '血糖値測定', new_measurement_path %>
+   </div>
+   <div class="sidebar_nav">
+     <%= link_to '食事記録', meal_records_path %>
+   </div>
+   <div class="sidebar_nav">
+     <%= link_to  '服薬', "#" %>
+   </div>
+</div>

@@ -1,15 +1,38 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>OriginalApp</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
+ 
+<div class= "heading">
+  <h1>Glycemic Control</h1>
+</div>
+  <% if user_signed_in? %>
+   <div class="topbar">
+     <div class="topbar_nav_status">
+       <%= "#{current_user.nickname}でログイン中" %>
+     </div>
+     <div class="topbar_nav_login">
+       <%= button_to 'ログアウト', destroy_user_session_path, method: :delete , class: :nav__btn %></li>
+     </div>
+  <% else %>
+    <div class="topbar_nav_status">
+     ログインしていません
+    </div>
+    <div class="topbar_nav_login">
+      <li><%= button_to 'ログイン', new_user_session_path %></li>
+    </div>
+    <div class="topbar_nav_signin">
+     <li><%= button_to '新規登録', new_user_registration_path %></li>
+    </div>
+   </div>
+  <% end %>
+<%# </div> %>
+
     <%= yield %>
   </body>
 </html>
