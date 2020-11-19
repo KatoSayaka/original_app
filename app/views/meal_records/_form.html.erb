@@ -2,14 +2,9 @@
     <div class="form-input">
       <%= f.date_field :date %>
       <%= f.select :meal_as, ['朝食', '昼食', '夕食', '間食'], {include_blank: '---'} %>
-      <%= f.text_field :content, placeholder: 'コメント' %>
-      <span class="image-file">画像</span>
+      <%= f.text_area :content, placeholder: 'コメント' %>
+      <div class="image-file">画像</div>
       <%= f.file_field :image, class: 'meal_image' %>
     </div>
   <%= f.submit '保存', class: 'form-submit' %>
-   <%# <div id="image-list"></div> %>
   <% end %>
-
-<%# <div class="meal_records"> 
-  <%= render partial: 'content' %>
-<%# </div> %> 

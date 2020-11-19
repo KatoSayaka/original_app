@@ -1,8 +1,14 @@
 class MealRecordsController < ApplicationController
   before_action :authenticate_user!, except:[:index]
+  before_action :set_meal_record, only: [:edit, :update, :destroy]
+
 
   def new
-    @meal_record = MealRecord.new
+    if user_signed_in?
+      @meal_record = MealRecord.new
+    else 
+      redirect_to user_session_path
+    end
   end
 
   def index
@@ -19,12 +25,13 @@ class MealRecordsController < ApplicationController
   end
 
   def edit
-    @meal_record = MealRecord.find(params[:id])
+    unless current_user == @meal_record.user
+      redirect_to root_path
+     end
   end
 
   def update
-    meal_record = MealRecord.find(params[:id])
-    if meal_record.update(meal_record_params)
+    if @meal_record.update(meal_record_params)
       redirect_to meal_records_path
     else
       render :edit
@@ -32,13 +39,20 @@ class MealRecordsController < ApplicationController
   end
 
   def destroy
-    meal_record = MealRecord.find(params[:id])
-    meal_record.destroy
+    # if current_user.id == @meal_record.user_id
+    @meal_record.destroy
+    # # else
     redirect_to  meal_records_path 
+    # end
   end
 
   private
   def meal_record_params
-    params.require(:meal_record).permit(:date, :meal_as, :content, :image)
+    params.require(:meal_record).permit(:date, :meal_as, :content, :image).merge(user_id: current_user.id)
   end
+
+  def set_meal_record
+    @meal_record = MealRecord.find(params[:id])
+  end
+
 end

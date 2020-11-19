@@ -4,4 +4,4 @@
 
    <%= render partial: "form", locals: { meal_recodr: @meal_record } %>
 
-   <%= link_to "削除する", meal_record_path(@meal_record), method: :delete, class: :meal_record_btn %>
+   <%= button_to "削除", meal_record_path(@meal_record), method: :delete, class: :meal_record_btn %>

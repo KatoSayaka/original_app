@@ -1,5 +1,7 @@
 class MealRecord < ApplicationRecord
   has_one_attached :image
+  belongs_to :user
+
   validate :date
   validate :meal_as
 

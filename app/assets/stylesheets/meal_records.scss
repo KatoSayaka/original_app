@@ -1,3 +1,45 @@
 // Place all the styles related to the meal_records controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+h2{
+  color: #FF8856;
+}
+
+.meal-record-lists{
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.meal-record-lists>.list {
+  width: 37vh;
+  padding: 1vw;
+  background-color: #FFF;
+  list-style: none;
+}
+
+.meal-date{
+  font-size: 2.5vh;
+}
+
+.meal_as{
+  font-size: 1.5vh;
+  display: flex;
+  justify-content: space-between;
+}
+
+.meal_record_comment{
+  display: block;
+  background-color: #FFF;
+  color: black;
+  padding: 1vw;
+}
+
+.meal-img{
+  width: 33vh;
+  height: 33vh;
+}
+
+
