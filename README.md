@@ -15,4 +15,30 @@
 | last_name_kana     | string | null: false |
 | birthday           | date   | null: false |
 
-# blood_glucosesテーブル
+- has_many :measurements
+- has_many :meal_records
+
+<!-- config/locales/devise.ja.ymlを編集してユーザー登録時のメッセージを日本語にすること -->
+
+# measurementsテーブル
+
+| Column        | Type    | Option      |  
+| --------------| --------｜------------｜
+| date          | date    |             |
+| time          | time    |             |
+| morning_value | integer | null: false |
+| daytime_value | integer | null: false |
+| night_value   | integer | null: false |
+
+- belongs_to :user
+
+# meal_recordsテーブル
+
+| Column  | Type   | Option      |  
+| ------- | -------｜------------｜
+| image   |        |             |
+| date    | string | null: false |
+| meal_as | string | null: false |
+| content | string |             |
+
+- belongs_to :user

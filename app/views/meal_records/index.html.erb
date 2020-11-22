@@ -1,6 +1,9 @@
-<h2>食事記録</h2><%= button_to '戻る', root_path, method: :get %>
-<%# 　<% if current_user.id == @meal_record.user_id %>
-  <%= button_to '記録する', new_meal_record_path, method: :get %> 
+<%= render 'homes/sidebar' %>
+
+<div class="meal-record">
+  <h2>食事記録</h2><%= button_to '戻る', root_path, method: :get, class:"meal-record-nav"%>
+<%# <% if current_user.id == @meal_record.user_id %>
+  <%= button_to '記録する', new_meal_record_path, method: :get, class:"meal-record-btn" %> 
   <%# <% end %>
   <ul class='meal-record-lists'>
     <% @meal_records.each do |meal_record| %>
@@ -24,3 +27,4 @@
      </li>
     <% end %>
   </ul>
+  </div>

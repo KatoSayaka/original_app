@@ -1,11 +1,16 @@
 .heading{
   background: #A8DBA8;
   border-top: 8px solid #79BD9A;
-  /* display: flex; */
   color: #555555;
   width: 100%;
+  text-align: center;
 }
 
+.heading-image {
+  display: inline;
+  vertical-align: middle;
+  padding-bottom: 15px;
+}
 
 .topbar{
   width: 60%;
@@ -14,41 +19,97 @@
   /* justify-content: flex-end; */
 }
 
-.topbar_nav_status{
+.lists-right {
+  display: block
   list-style: none;
-  font-size: 15px;
-  /* margin: 0 0 0 auto ; */
-  /* display: flex; */
-  justify-content: flex-end;
-  color: #444444;
+  /* align-items: flex-end; */
+  text-align: right;
+  border
+}
+
+li{
+  list-style: none;
   display: inline-block;
 }
 
-.topbar_nav_login{
+/* .topbar-nav-status{
   list-style: none;
   font-size: 15px;
-  /* margin: 0 0 0 auto; */
-  /* display: flex; */
-  /* justify-content: flex-end; */
-  color: #444444;
+  /* display: flex;
+  justify-content: flex-end; */
+  /* color: #444444;
   display: inline-block;
-}
+} */ 
 
-.topbar_nav_signin{
+/* .topbar-nav-login{
   list-style: none;
   font-size: 15px;
-  /* margin : 0 0 0 auto; */
-  /* /* display: flex; */
-  /* justify-content: flex-end; */
-  color: #444444;
-  display: inline-block; 
-}
+  /* display: flex;
+  justify-content: flex-end; */
+  /* color: #444444;
+  display: inline-block; */
+/* }  */
 
-.nav_btn{
+/* .topbar-nav-signin{
+  list-style: none;
+  font-size: 15px;
+  /* display: flex;
+  justify-content: flex-end; */
+  /* color: #444444;
+  display: inline-block;
+} */ 
+
+
+.nav-btn{
   margin: 7px 0 0 0;
   background-color: #FFFFBB ;
   text-align: center;
   font-size: 15px;
   border-radius: 6px;
+  transition: 0.4s ease;
 }
  
+.nav-btn:hover{
+  color:white;
+  background-color:gold;
+  font-weight :bold;
+}
+
+.wrapper {
+  display: flex;
+}
+
+.sidebar {
+  height: 200vh;
+  width: 15vw;
+  box-sizing: border-box;
+  border-right: 1px solid rgb(221, 221, 221);
+  padding: 1.5rem 1rem;
+  font-weight: 600;
+  background: lightyellow;
+  position: relative;
+}
+
+.sidebar-home>a{
+  color: #FF4F50	;
+  
+}
+
+.sidebar-home{
+  margin-bottom: 30px;
+}
+
+.sidebar-nav {
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  /* padding: 14px; */
+  border-bottom: 2px solid rgb(221, 221, 221);
+}
+
+a {
+  color: #444444;
+  text-decoration: none;
+}
+

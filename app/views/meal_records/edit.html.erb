@@ -1,7 +1,13 @@
-<h3>食事記録</h3><%= button_to '戻る', root_path, method: :get %>
+<%# <%= render 'measurements/sidebar' %> 
+<%= render 'homes/sidebar' %>
 
-   <h4 class="page-heading">編集</h4>
+<div class="meal-record">
+  <h2>食事記録</h2><%= button_to '戻る', meal_records_path, method: :get %>
+
+  <h3 class="page-heading">編集する</h4>
 
    <%= render partial: "form", locals: { meal_recodr: @meal_record } %>
 
-   <%= button_to "削除", meal_record_path(@meal_record), method: :delete, class: :meal_record_btn %>
+   <%= button_to "削除", meal_record_path(@meal_record), method: :delete, class: 'meal-record-btn' %>
+
+</div>

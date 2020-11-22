@@ -1,0 +1,20 @@
+<%= render 'homes/sidebar' %>
+
+<div class="main-record">
+  
+<%= form_with(model:@measurement, method: :post, local: true) do |f| %>
+    <h4>Date
+      <%= f.date_field :date %>
+      Timezone
+      <%= f.select :timezone, ['morning', 'daytime', 'night', 'other'], {include_blank: '---'} %>
+      Value
+      <%= f.text_field :value  , id: "value"%>mg/dl
+    </h4>
+      <%= f.submit 'save' , id: "submit" %>
+  <% end %>
+
+<div id="list">
+</div>
+
+ 
+</div>
