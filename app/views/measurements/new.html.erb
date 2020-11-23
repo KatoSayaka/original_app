@@ -3,11 +3,11 @@
 <div class="main-record">
   
 <%= form_with(model:@measurement, method: :post, local: true) do |f| %>
-    <h4>Date
+    <h4>日付
       <%= f.date_field :date %>
-      Timezone
+       時間帯
       <%= f.select :timezone, ['morning', 'daytime', 'night', 'other'], {include_blank: '---'} %>
-      Value
+      測定値
       <%= f.text_field :value  , id: "value"%>mg/dl
     </h4>
       <%= f.submit 'save' , id: "submit" %>

@@ -1,11 +1,58 @@
 h2{
   color: #FF8856;
+  text-align: start;
+
 }
 
-h3{
-  color:#FF5F17;
-}
 
 h4{
   color: #555555;
+}
+
+.meal-record-btn:hover{
+  color: white;
+  font-weight :bold;
+}
+
+
+.meal-record-lists{
+  width: calc(100vw - 15vw);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.meal-record-lists>.list {
+  width: 33vh;
+  padding: 1vw;
+  background-color: #FFF;
+  list-style: none;
+}
+
+.meal-date{
+  display: block;
+  font-size: 2.5vh;
+}
+
+.meal_as{
+  display: block;
+  display: flex;
+  justify-content: space-between;
+}
+
+.meal-record-comment{
+  display: block;
+  background-color: #FFF;
+  color: black;
+  padding: 1vw;
+  font-size: 2vh;
+}
+
+.meal-img{
+  width: 33vh;
+  height: 33vh;
+}
+
+.meal-btn-nav{
+  text-align: center;
 }

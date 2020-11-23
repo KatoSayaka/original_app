@@ -9,7 +9,7 @@
   <body>
  
 <div class= "heading">
-  <h1>いつものごはん</h1>
+  <h1>まいにちごはん</h1>
   <%= image_tag 'rice.png', size: '80x80' ,class:"heading-image" %>
 </div>
   <% if user_signed_in? %>
@@ -20,7 +20,9 @@
      <%# <div class="topbar-nav-login"> %>
        <li><%= button_to 'ログアウト', destroy_user_session_path, method: :delete, class:"nav-btn" %></li>
      <%# </div> %>
+     </ul>
   <% else %>
+    <ul class='lists-right'>
     <%# <div class="topbar-nav-status"> %>
      <li >ログインしていません</li>
     <%# <div class="topbar-nav-login"> %>

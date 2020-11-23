@@ -1,0 +1,25 @@
+
+.meal-record{
+  width: calc(100vw -15vw);
+  text-align: center;
+  position: relative;
+  }
+  
+  h2{
+    color: #FF8856;
+    margin-left: 8vw;
+  }
+  
+
+.meal-record-nav{
+  font-size: 17px;
+}
+
+.meal-record-btn{
+margin-top: 30px;
+background-color:#FFCC66;
+text-align: center;
+font-size: 20px;
+border-radius: 6px;
+color: #555555;
+}
