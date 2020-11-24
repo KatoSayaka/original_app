@@ -12,7 +12,7 @@ class MealRecordsController < ApplicationController
   end
 
   def index
-    @meal_records = MealRecord.all
+    @meal_records = MealRecord.all.order("date DESC")
   end
 
   def create
@@ -48,7 +48,7 @@ class MealRecordsController < ApplicationController
 
   private
   def meal_record_params
-    params.require(:meal_record).permit(:date, :meal_as, :content, :image).merge(user_id: current_user.id)
+    params.require(:meal_record).permit(:date, :meal_as, :medicine, :content, :image).merge(user_id: current_user.id)
   end
 
   def set_meal_record
