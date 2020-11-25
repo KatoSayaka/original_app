@@ -8,6 +8,8 @@
   width: calc(100vw - 15vw);
   padding: 1.5rem 1rem;
   text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 
 
@@ -37,10 +39,22 @@
   line-height: 50px;
   color: #444444;
   margin-top: 2rem;
-  // text-align: center;
 }
 
 .service-lists-image{
   display: inline;
   vertical-align: middle;
 }
+
+.footer {
+  width: calc(100vw - 15vw);
+  padding: 2vh 0;
+}
+
+.footer-link{
+  padding: 0.5em;
+  color: #494949;
+  background: #fffaf4;
+  border-left: solid 5px #ffaf58;
+}
+
