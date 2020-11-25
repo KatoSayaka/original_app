@@ -5,8 +5,9 @@
 
 
 .main-content{
-  margin-left: 5vw ;
+  width: calc(100vw - 15vw);
   padding: 1.5rem 1rem;
+  text-align: center;
 }
 
 
@@ -14,6 +15,32 @@
   color: #FF8856;
 }
 
+.service-contents{
+  margin-top: 5rem;
+}
+
 .service-explain{
   font-size: 2.5vh;
+  
+}
+.service-lists{
+  margin-top: 2.5rem;
+  height: 20rem;
+  background-image: linear-gradient(45deg, #FFFF99 0%, #FF9872 100%);
+  text-align: center;
+}
+
+.service-list-discription{
+  display: block;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 50px;
+  color: #444444;
+  margin-top: 2rem;
+  // text-align: center;
+}
+
+.service-lists-image{
+  display: inline;
+  vertical-align: middle;
 }

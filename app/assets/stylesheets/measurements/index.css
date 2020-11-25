@@ -4,17 +4,6 @@
   position: relative;
   }
 
-/* .measurement-lists{
-  width: calc(100vw - 15vw);
-  display: flex;
-  justify-content: center;
-} */
-
-/* tr{
-  width: calc(100vw - 15vw);
-  display: flex;
-  justify-content: center;
-} */
 
 .measurement-lists{
   width: 33vh;
@@ -35,15 +24,6 @@ th{
   margin-top: 2.5vh;
 }
 
-/* th, td{
-  border: 1px #DCDCDC solid;
-  padding: 10px;
-}
-
-table{
-  border-collapse: collapse;
-  border: 1px #DCDCDC solid;
-} */
 
 table th,td{
   padding: 3px 20px;
