@@ -31,7 +31,6 @@ li{
   display: inline-block; 
 }
 
-
 .nav-btn{
   margin: 7px 0 0 0;
   background-color: #FFFFBB ;
@@ -63,7 +62,7 @@ li{
 }
 
 .sidebar-home>a{
-  color: #FF4F50	;
+  color: #FF4F50;
   
 }
 
