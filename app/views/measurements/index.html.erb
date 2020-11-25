@@ -3,36 +3,36 @@
 <div class="measurement-record">
   <h2 class="measurement">血糖値測定</h2><%= button_to '戻る', root_path, method: :get, class:"measurement-nav" %>
   <%= button_to '記録する', new_measurement_path, method: :get, class:"measurement-btn" %>
-<table class='measurement-lists'>
-  <thead>
-    <tr class="measurement-article">
-      <th width=10%>日付</th>
-      <th width=10%>時間帯</th>
-      <th width=10%>測定値(mg/dl)</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @measurements.each do |measurement| %>
-      <tr class="measurement-contents">
-        <td width=10%>
-          <%= link_to edit_measurement_path(measurement) do %>
-            <%= measurement.date %>
+    <table class='measurement-lists'>
+      <thead>
+        <tr class="measurement-article">
+          <th width=10%>日付</th>
+          <th width=10%>時間帯</th>
+          <th width=10%>測定値(mg/dl)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @measurements.each do |measurement| %>
+          <% if user_signed_in? && measurement.user_id == current_user.id %>
+            <tr class="measurement-contents">
+              <td width=10%>
+                <%= link_to edit_measurement_path(measurement) do %>
+                  <%= measurement.date %>
+                <% end %>
+              </td>
+              <td width=10%>
+                <%= link_to edit_measurement_path(measurement) do %>
+                  <%= measurement.timezone %>
+                <% end %>
+              </td>
+              <td width=10%>
+                <%= link_to edit_measurement_path(measurement) do %>
+                  <%= measurement.value %>
+                <% end %>
+              </td>
+            </tr>
           <% end %>
-        </td>
-        <td width=10%>
-          <%= link_to edit_measurement_path(measurement) do %>
-            <%= measurement.timezone %>
-          <% end %>
-        </td>
-        <td width=10%>
-          <%= link_to edit_measurement_path(measurement) do %>
-            <%= measurement.value %>
-          <% end %>
-        </td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-
+        <% end %>
+      </tbody>
+    </table>
 </div>

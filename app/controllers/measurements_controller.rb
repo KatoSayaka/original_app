@@ -1,4 +1,5 @@
 class MeasurementsController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_measurement, only: [:edit, :update, :destroy]
 
   def index
@@ -35,8 +36,11 @@ class MeasurementsController < ApplicationController
   end
  
   def destroy
-    @measurement.destroy
-    redirect_to measurements_path
+    if current_user.id == @measurement.user_id
+      @measurement.destroy
+    else
+      redirect_to measurements_path
+    end
   end
 
 

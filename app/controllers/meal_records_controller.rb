@@ -1,5 +1,5 @@
 class MealRecordsController < ApplicationController
-  before_action :authenticate_user!, except:[:index]
+  before_action :authenticate_user!
   before_action :set_meal_record, only: [:edit, :update, :destroy]
 
 
@@ -39,11 +39,11 @@ class MealRecordsController < ApplicationController
   end
 
   def destroy
-    # if current_user.id == @meal_record.user_id
-    @meal_record.destroy
-    # # else
-    redirect_to  meal_records_path 
-    # end
+    if current_user.id == @meal_record.user_id
+      @meal_record.destroy
+    else
+      redirect_to  meal_records_path 
+    end
   end
 
   private
