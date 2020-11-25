@@ -5,7 +5,7 @@
 
 <h3 class="page-heading">編集する</h3>
 
-<%= form_with model:@measurement, url: measurements_path, method: :post, local: true do |f| %>
+<%= form_with model:@measurement, local: true do |f| %>
   <div class="form-input"> 
     <div class="input-measuremet-date">
       <p>日付</p>
@@ -13,14 +13,15 @@
     </div>
     <div class="input-timezone">
       <p>時間帯</p>
-      <%= f.select :timezone, ['朝', '昼', '夜', 'その他'], {include_blank: '---'} %>
+      <%= f.select :timezone, ['起床時', '朝食前','朝食後', '昼食前', '昼食後', '夕食前', '夕食後', '就寝前', 'その他'], {include_blank: '---'} %>
     </div>
     <div class="input-value">
       <p>測定値</p>
       <%= f.text_field :value, id: "value"%>mg/dl
     </div>
   </div>
-  <%= f.submit '保存' , class: "measurement-btn" %>
+  <%= f.submit '保存' , class: "save-btn" %>
 <% end %>
 
+<%= button_to "削除", measurement_path(@measurement), method: :delete, class: 'measurement-btn' %>
 </div>

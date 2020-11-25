@@ -14,11 +14,21 @@
   <tbody>
     <% @measurements.each do |measurement| %>
       <tr class="measurement-contents">
-        <%= link_to edit_measurement_path(measurement) do %>
-        <td width=10%><%= measurement.date %></td>
-        <td width=10%><%= measurement.timezone %></td>
-        <td width=10%><%= measurement.value %></td>
-       <% end %>
+        <td width=10%>
+          <%= link_to edit_measurement_path(measurement) do %>
+            <%= measurement.date %>
+          <% end %>
+        </td>
+        <td width=10%>
+          <%= link_to edit_measurement_path(measurement) do %>
+            <%= measurement.timezone %>
+          <% end %>
+        </td>
+        <td width=10%>
+          <%= link_to edit_measurement_path(measurement) do %>
+            <%= measurement.value %>
+          <% end %>
+        </td>
       </tr>
     <% end %>
   </tbody>

@@ -3,7 +3,7 @@
 <div class="measurement-record">
   <h2 class="measurement">血糖値測定</h2><%= button_to '戻る', measurements_path, method: :get, class:"measurement-nav" %>
 
-<%= form_with model:@measurement, url: measurements_path, method: :post, local: true do |f| %>
+<%= form_with model:@measurement, local: true do |f| %>
   <div class="form-input"> 
     <div class="input-measuremet-date">
       <p>日付</p>
@@ -11,14 +11,14 @@
     </div>
     <div class="input-timezone">
       <p>時間帯</p>
-      <%= f.select :timezone, ['朝', '昼', '夜', 'その他'], {include_blank: '---'} %>
+      <%= f.select :timezone, ['起床時', '朝食前','朝食後', '昼食前', '昼食後', '夕食前', '夕食後', '就寝前', 'その他'], {include_blank: '---'} %>
     </div>
     <div class="input-value">
       <p>測定値</p>
       <%= f.text_field :value, id: "value"%>mg/dl
     </div>
   </div>
-  <%= f.submit '保存' , class: "measurement-btn" %>
+  <%= f.submit '保存' , class: "save-btn" %>
 <% end %>
 
 <div id="list">
