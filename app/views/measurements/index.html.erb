@@ -1,38 +1,32 @@
-<%= render 'homes/sidebar' %>
+ <%= render 'homes/sidebar' %>
 
-<div class="measurement-record">
-  <h2 class="measurement">血糖値測定</h2><%= button_to '戻る', root_path, method: :get, class:"measurement-nav" %>
-  <%= button_to '記録する', new_measurement_path, method: :get, class:"measurement-btn" %>
-    <table class='measurement-lists'>
-      <thead>
-        <tr class="measurement-article">
-          <th width=10%>日付</th>
-          <th width=10%>時間帯</th>
-          <th width=10%>測定値(mg/dl)</th>
-        </tr>
-      </thead>
-      <tbody>
-        <% @measurements.each do |measurement| %>
-          <% if user_signed_in? && measurement.user_id == current_user.id %>
-            <tr class="measurement-contents">
-              <td width=10%>
-                <%= link_to edit_measurement_path(measurement) do %>
-                  <%= measurement.date %>
-                <% end %>
-              </td>
-              <td width=10%>
-                <%= link_to edit_measurement_path(measurement) do %>
-                  <%= measurement.timezone %>
-                <% end %>
-              </td>
-              <td width=10%>
-                <%= link_to edit_measurement_path(measurement) do %>
-                  <%= measurement.value %>
-                <% end %>
-              </td>
-            </tr>
-          <% end %>
-        <% end %>
-      </tbody>
-    </table>
+<div class="main-record">
+   
+    <h2 class='service-explain'>
+      いつものごはんを写真に撮って、記録にしよう
+    </h2>
+
+<div class='select-contents'>
+    <p class='service-explain'>
+      面倒な食事記録をつけなくても、毎日の食事を写真に撮って、
+    </p>
+    <p class='service-explain'>
+      簡単に食生活を振り返ることができる
+    </p>
+      <p class='service-explain'>
+      糖尿病患者さんのためのアプリです
+    </p>
+
+    <ul class="servce-lists">
+      <li class="service-list-discription">
+        食事の写真にコメントをつけて振り返る
+  
+      </li>
+
+
+
+
 </div>
+
+</div>
+

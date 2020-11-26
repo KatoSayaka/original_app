@@ -36,7 +36,6 @@ ActiveRecord::Schema.define(version: 2020_11_19_061034) do
   create_table "meal_records", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "date", null: false
     t.string "meal_as", null: false
-    t.string "medicine", null: false
     t.string "content"
     t.bigint "user_id"
     t.datetime "created_at", precision: 6, null: false
@@ -45,9 +44,9 @@ ActiveRecord::Schema.define(version: 2020_11_19_061034) do
   end
 
   create_table "measurements", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "date", null: false
-    t.string "timezone", null: false
-    t.integer "value", null: false
+    t.string "date"
+    t.string "timezone"
+    t.integer "value"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "user_id"
