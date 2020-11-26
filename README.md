@@ -18,27 +18,28 @@
 - has_many :measurements
 - has_many :meal_records
 
-<!-- config/locales/devise.ja.ymlを編集してユーザー登録時のメッセージを日本語にすること -->
-
-# measurementsテーブル
-
-| Column        | Type    | Option      |  
-| --------------| --------｜------------｜
-| date          | date    |             |
-| time          | time    |             |
-| morning_value | integer | null: false |
-| daytime_value | integer | null: false |
-| night_value   | integer | null: false |
-
-- belongs_to :user
 
 # meal_recordsテーブル
 
-| Column  | Type   | Option      |  
-| ------- | -------｜------------｜
-| image   |        |             |
-| date    | string | null: false |
-| meal_as | string | null: false |
-| content | string |             |
+| Column   | Type   | Option      |  
+| -------- | -------｜------------｜
+| image    |        |             |
+| date     | string | null: false |
+| meal_as  | string | null: false |
+| medicine | string | null: false |
+| content  | string |             |
+
+- belongs_to :user
+
+
+# measurementsテーブル
+
+| Column        | Type       | Option      |  
+| --------------| -----------｜------------｜
+| date          | date       | null: false |
+| timezone      | string     | null: false |
+| value         | integer    | null: false |
+| morning_value | integer    | null: false |
+| user          | references | foreign_key: true |
 
 - belongs_to :user
