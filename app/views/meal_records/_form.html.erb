@@ -1,14 +1,31 @@
 
  <%= form_with model: @meal_record, class: 'new-meal-record', local: true do |f| %>
-    <div class="form-input">
-      <h4>日付
+  <div class="form-input">
+      <div class="input-meal-date">
+        <p>日付</p>
         <%= f.date_field :date %>
-          食事のタイミング
+      </div>
+      <div class="input-meal_as">
+        <p>食事のタイミング</p>
         <%= f.select :meal_as, ['朝食', '昼食', '夕食', '間食'], {include_blank: '---'} %>
+      </div>
+      <div class="input-take-medicine">
+        <p>お薬チェック</p>
+        <%= f.radio_button :medicine, :"服薬/注射した", checked: true %>
+        <%= f.label :medicine, "服薬/注射した", {value: :"服薬/注射した", style: "display: inline-block;"} %>
+        <%= f.radio_button :medicine, :"不要" %>
+        <%= f.label :medicine, "不要", {value: :"不要", style: "display: inline-block;" } %>
+        <%= f.radio_button :medicine, :"服薬/注射しなかった" %>
+        <%= f.label :medicine, "服薬/注射しなかった", {value: :"服薬/注射しなかった", style: "display: inline-block;"} %>
+      </div>
+      <div class="input-comment">
+        <p>コメント</p>
         <%= f.text_area :content, placeholder: 'コメントを入れよう！' %>
-        <div class="image-file">写真</div>
-        <%= f.file_field :image, class: 'input-meal-image' %>
-      </h4>
-    </div>
-  <%= f.submit '保存', class: 'meal-record-button' %>
+      </div>
+      <div class="input-meal-image">
+        <p>写真</p>
+        <%= f.file_field :image %>
+      </div>
+  </div>
+      <%= f.submit '保存', class: 'save-btn' %>
   <% end %>

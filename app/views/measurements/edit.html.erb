@@ -3,6 +3,8 @@
 <div class="measurement-record">
   <h2 class="measurement">血糖値測定</h2><%= button_to '戻る', measurements_path, method: :get, class:"measurement-nav" %>
 
+<h3 class="page-heading">編集する</h3>
+
 <%= form_with model:@measurement, local: true do |f| %>
   <div class="form-input"> 
     <div class="input-measuremet-date">
@@ -21,7 +23,5 @@
   <%= f.submit '保存' , class: "save-btn" %>
 <% end %>
 
-<div id="list">
-</div>
-
+<%= button_to "削除", measurement_path(@measurement), method: :delete, class: 'measurement-btn' %>
 </div>
