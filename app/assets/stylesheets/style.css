@@ -19,7 +19,7 @@
 }
 
 .lists-right {
-  display: block
+  display: block;
   list-style: none;
   text-align: right;
   border-bottom: 8px double #79BD9A;
