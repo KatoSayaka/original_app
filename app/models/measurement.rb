@@ -1,12 +1,8 @@
 class Measurement < ApplicationRecord
-  belongs_to :user, optional: true
+  belongs_to :user
 
-  with_options presence: true do
-    validates :date 
-    validates :timezone
-  end
-  
-  validates :value, format: {with: /\A[0-9]+\z/},
-             numericality: { only_integer: true }
+  validates :date    , presence: true
+  validates :timezone, presence: true
+  validates :value   , presence: true
 
 end

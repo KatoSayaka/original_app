@@ -1,5 +1,5 @@
 class MealRecordsController < ApplicationController
-  before_action :authenticate_user!
+  before_action :authenticate_user!, except:[:index]
   before_action :set_meal_record, only: [:edit, :update, :destroy]
 
 
@@ -12,7 +12,7 @@ class MealRecordsController < ApplicationController
   end
 
   def index
-    @meal_records = MealRecord.all.order("date DESC")
+    @meal_records = MealRecord.all
   end
 
   def create
@@ -39,16 +39,16 @@ class MealRecordsController < ApplicationController
   end
 
   def destroy
-    if current_user.id == @meal_record.user_id
-      @meal_record.destroy
-    else
-      redirect_to  meal_records_path 
-    end
+    # if current_user.id == @meal_record.user_id
+    @meal_record.destroy
+    # # else
+    redirect_to  meal_records_path 
+    # end
   end
 
   private
   def meal_record_params
-    params.require(:meal_record).permit(:date, :meal_as, :medicine, :content, :image).merge(user_id: current_user.id)
+    params.require(:meal_record).permit(:date, :meal_as, :content, :image).merge(user_id: current_user.id)
   end
 
   def set_meal_record
