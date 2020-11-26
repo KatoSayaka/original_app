@@ -1,0 +1,10 @@
+<%= render 'homes/sidebar' %>
+
+<div class="meal-record">
+  <h2 class="meal-record">食事記録</h2><%= button_to '戻る', meal_records_path, method: :get, class:"meal-record-nav" %>
+
+  <h3 class="page-heading">いつのごはん？</h3>
+
+  <%= render partial: "form", locals: { meal_recodr: @meal_record } %>
+
+</div>

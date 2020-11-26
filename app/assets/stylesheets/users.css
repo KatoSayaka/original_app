@@ -1,0 +1,69 @@
+.sign-up_log-in-page {
+  text-align: center;
+  /* margin: 0 auto; */
+}
+header {
+  margin-top: 30px;
+  color: #00CC66;
+}
+
+hr {
+  border-width: 3px;
+  border-color: #00CC66;
+}
+
+h1 {
+  font-size: 35px;
+  font-weight: bold;
+  display: contents;
+}
+
+.user-btn {
+  margin-top: 30px;
+  background-color:#FFFF66 ;
+  font-size: 20px;
+  border-radius: 6px;
+}
+
+.user-btn:hover{
+  color:white;
+  background-color:gold;
+  font-weight :bold;
+}
+
+.sns-user-btn, .action-btn {
+  margin-top: 30px;
+  background-color:#FFCC66;
+  font-size: 20px;
+  border-radius: 6px;
+}
+
+.sns-user-btn:hover{
+  color: white;
+  font-weight :bold;
+}
+
+.action-btn:hover{
+  color: white;
+  font-weight :bold;
+}
+
+label{
+  color: #555555;
+  font-weight :bold;
+}
+
+.input-birthday{
+  width: 130px;
+  height: 40px;
+}
+
+input[type="email"]{
+  width: 300px;
+  height: 40px;
+}
+
+input[type="password"]{
+  width: 300px;
+  height: 40px;
+}
