@@ -1,0 +1,14 @@
+
+ <%= form_with model: @meal_record, class: 'new-meal-record', local: true do |f| %>
+    <div class="form-input">
+      <h4>日付
+        <%= f.date_field :date %>
+          食事のタイミング
+        <%= f.select :meal_as, ['朝食', '昼食', '夕食', '間食'], {include_blank: '---'} %>
+        <%= f.text_area :content, placeholder: 'コメントを入れよう！' %>
+        <div class="image-file">写真</div>
+        <%= f.file_field :image, class: 'input-meal-image' %>
+      </h4>
+    </div>
+  <%= f.submit '保存', class: 'meal-record-button' %>
+  <% end %>

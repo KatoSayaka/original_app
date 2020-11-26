@@ -1,0 +1,30 @@
+<%= render 'homes/sidebar' %>
+
+<div class="meal-record">
+  <h2>食事記録</h2><%= button_to '戻る', root_path, method: :get, class:"meal-record-nav"%>
+<%# <% if current_user.id == @meal_record.user_id %>
+  <%= button_to '記録する', new_meal_record_path, method: :get, class:"meal-record-btn" %> 
+  <%# <% end %>
+  <ul class='meal-record-lists'>
+    <% @meal_records.each do |meal_record| %>
+     <li class='list'>
+      <%= link_to edit_meal_record_path(meal_record) do %>
+        <div class="meal-date">
+          <%= meal_record.date %>
+        </div>
+        <div class="meal-as">
+          <%= meal_record.meal_as %>
+        </div>
+        <div class="meal-record-comment">
+          <%= meal_record.content %>
+        </div>
+        <div class="meal-img-content">
+         <% if meal_record.image.attached? %>
+         <%= image_tag meal_record.image.variant(resize: "250x250"), class: "meal-img" %>
+         <% end %>
+        </div>
+      <% end %> 
+     </li>
+    <% end %>
+  </ul>
+  </div>

@@ -1,15 +1,39 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>OriginalApp</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
+  <body>
+ 
+<div class= "heading">
+  <h1>いつものごはん</h1>
+  <%= image_tag 'rice.png', size: '80x80' ,class:"heading-image" %>
+</div>
+  <% if user_signed_in? %>
+    <ul class='lists-right'>
+     <%# <div class="topbar-nav-status"> %>
+       <li><%= "#{current_user.nickname}でログイン中" %></li>
+     <%# </div> %>
+     <%# <div class="topbar-nav-login"> %>
+       <li><%= button_to 'ログアウト', destroy_user_session_path, method: :delete, class:"nav-btn" %></li>
+     <%# </div> %>
+  <% else %>
+    <%# <div class="topbar-nav-status"> %>
+     <li >ログインしていません</li>
+    <%# <div class="topbar-nav-login"> %>
+      <li><%= button_to 'ログイン', new_user_session_path, class:"nav-btn" %></li>
+    <%# </div> %>
+    <%# <div class="topbar-nav-signin"> %>
+     <li><%= button_to '新規登録', new_user_registration_path, method: :get, class:"nav-btn" %></li>
+    <%# </div> %>
+   <% end %>
+  </ul>
 
   <body>
+
     <%= yield %>
   </body>
 </html>
