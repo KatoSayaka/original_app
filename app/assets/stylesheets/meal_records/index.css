@@ -1,0 +1,55 @@
+
+.meal-record{
+  width: calc(100vw -15vw);
+  text-align: center;
+  position: relative;
+  }
+  
+h2.meal-record{
+  color: #FF8856;
+  margin-left: 8vw;
+  }
+
+.meal-record-nav{
+  font-size: 17px;
+}
+
+.meal-record-lists{
+  width: calc(100vw - 15vw);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.meal-record-lists>.list {
+  width: 33vh;
+  padding: 1vw;
+  background-color: #FFF;
+  list-style: none;
+  font-size: 2vh;
+}
+
+.meal-date{
+  /* display: block; */
+  
+}
+
+.meal_as{
+  display: block;
+  display: flex;
+  /* justify-content: space-between; */;
+}
+
+.meal-record-comment{
+  background-color: #FFF;
+  color: black;
+  padding: 1vw;
+  font-size: 1.5vh;
+}
+
+.meal-img{
+  width: 33vh;
+  height: 33vh;
+}
+
+

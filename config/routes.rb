@@ -6,6 +6,6 @@ Rails.application.routes.draw do
   }
    root to:'homes#top'
    resources :users, only: [:new] 
-   resources :measurements, only: [:new, :create]
+   resources :measurements, only: [:index, :new, :create, :edit, :update, :destroy]
    resources :meal_records, only: [:index, :new, :create, :edit, :update, :destroy]
 end
