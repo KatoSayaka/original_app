@@ -39,7 +39,6 @@
 | date          | date       | null: false |
 | timezone      | string     | null: false |
 | value         | integer    | null: false |
-| morning_value | integer    | null: false |
 | user          | references | foreign_key: true |
 
 - belongs_to :user
