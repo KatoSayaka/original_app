@@ -41,9 +41,8 @@ class MealRecordsController < ApplicationController
   def destroy
     if current_user.id == @meal_record.user_id
       @meal_record.destroy
-    else
-      redirect_to  meal_records_path 
     end
+      redirect_to  meal_records_path 
   end
 
   private

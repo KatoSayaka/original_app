@@ -38,9 +38,8 @@ class MeasurementsController < ApplicationController
   def destroy
     if current_user.id == @measurement.user_id
       @measurement.destroy
-    else
-      redirect_to measurements_path
     end
+      redirect_to measurements_path
   end
 
 
