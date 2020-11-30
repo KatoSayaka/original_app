@@ -1,6 +1,6 @@
 ## README
 
-![top-image](https://user-images.githubusercontent.com/71808545/100613078-4ce24280-3357-11eb-8103-69b2bf3db169.png)
+![top-image](https://user-images.githubusercontent.com/71808545/100614030-d47c8100-3358-11eb-95b3-a099736c4b74.png)
 # まいにちごはん  
 
 ## 説明  
