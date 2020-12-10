@@ -16,7 +16,7 @@
 また、糖尿病患者さんにとって食事と同じくらい大切な血糖値管理記録、服薬管理もいっしょにできるのがポイントです。  
   
 ## 使用技術(開発環境)  
-HTML・CSS・Ruby・Ruby on Rails・SQL・Git・GitHub  
+HTML・CSS・Ruby・Ruby on Rails・SQL・Git・GitHub・AWS(S3)  
   
 ## 課題や今後実装したい機能  
 現状、食事記録や血糖値記録を記録日時順に一覧表示できるが、1日ごとに表示できた方が便利なので  
