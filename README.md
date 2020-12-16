@@ -26,7 +26,7 @@ HTML・CSS・Ruby・Ruby on Rails・SQL・Git・GitHub・AWS(S3)
 
 ## テーブル設計
 
-### usersテーブル
+## usersテーブル
   
 | Column             | Type   | Options     |  
 | ------------------ | -------｜------------｜  
@@ -43,7 +43,7 @@ HTML・CSS・Ruby・Ruby on Rails・SQL・Git・GitHub・AWS(S3)
 - has_many :meal_records  
 
   
-### meal_recordsテーブル  
+## meal_recordsテーブル  
   
 | Column   | Type   | Options     |  
 | -------- | -------｜------------｜  
@@ -56,7 +56,7 @@ HTML・CSS・Ruby・Ruby on Rails・SQL・Git・GitHub・AWS(S3)
 - belongs_to :user  
 
   
-### measurementsテーブル  
+## measurementsテーブル  
 
 | Column        | Type       | Options     |  
 | --------------| -----------｜------------｜  
