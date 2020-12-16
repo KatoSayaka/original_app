@@ -28,7 +28,7 @@ HTML・CSS・Ruby・Ruby on Rails・SQL・Git・GitHub・AWS(S3)
 
 ### usersテーブル
   
-| Column             | Type   | Option      |  
+| Column             | Type   | Options     |  
 | ------------------ | -------｜------------｜  
 | nickname           | string | null: false |  
 | email              | string | null: false |  
@@ -45,7 +45,7 @@ HTML・CSS・Ruby・Ruby on Rails・SQL・Git・GitHub・AWS(S3)
   
 ### meal_recordsテーブル  
   
-| Column   | Type   | Option      |  
+| Column   | Type   | Options     |  
 | -------- | -------｜------------｜  
 | image    |        |             |  
 | date     | string | null: false |  
@@ -58,7 +58,7 @@ HTML・CSS・Ruby・Ruby on Rails・SQL・Git・GitHub・AWS(S3)
   
 ### measurementsテーブル  
 
-| Column        | Type       | Option      |  
+| Column        | Type       | Options     |  
 | --------------| -----------｜------------｜  
 | date          | date       | null: false |  
 | timezone      | string     | null: false |  
