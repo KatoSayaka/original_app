@@ -25,19 +25,30 @@ HTML・CSS・Ruby・Ruby on Rails・SQL・Git・GitHub・AWS(S3)
 
 
 ## テーブル設計
+| Column             | Type   | Options     |
+| ------------------ | ------ | ----------- |
+| nickname           | string | null: false |
+| email              | string | null: false |
+| encrypted_password | string | null: false |
+| first_name         | string | null: false |
+| last_name          | string | null: false |
+| first_name_kana    | string | null: false |
+| last_name_kana     | string | null: false |
+| birthday           | date   | null: false |
 
 ### usersテーブル
   
-| Column             | Type   | Options     |  
-| ------------------ | -------｜------------｜  
-| nickname           | string | null: false |  
-| email              | string | null: false |  
-| encrypted_password | string | null: false |  
-| first_name         | string | null: false |  
-| last_name          | string | null: false |  
-| first_name_kana    | string | null: false |  
-| last_name_kana     | string | null: false |  
-| birthday           | date   | null: false |  
+| Column             | Type   | Options     |
+| ------------------ | ------ | ----------- |
+| nickname           | string | null: false |
+| email              | string | null: false |
+| encrypted_password | string | null: false |
+| first_name         | string | null: false |
+| last_name          | string | null: false |
+| first_name_kana    | string | null: false |
+| last_name_kana     | string | null: false |
+| birthday           | date   | null: false |
+  
   
 - has_many :measurements  
 - has_many :meal_records  
