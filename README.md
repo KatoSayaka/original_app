@@ -46,13 +46,13 @@ HTML・CSS・Ruby・Ruby on Rails・SQL・Git・GitHub・AWS(S3)
   
 ### meal_recordsテーブル  
   
-| Column   | Type   | Options     |  
-| -------- | -------｜------------｜  
-| image    |        |             |  
-| date     | string | null: false |  
-| meal_as  | string | null: false |  
-| medicine | string | null: false |  
-| content  | string |             |  
+| Column   | Type   | Options     |
+| -------- | -------| ----------- |
+| image    |        |             |
+| date     | string | null: false |
+| meal_as  | string | null: false |
+| medicine | string | null: false |
+| content  | string |             |
   
 - belongs_to :user  
 
