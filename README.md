@@ -59,7 +59,7 @@ HTML・CSS・Ruby・Ruby on Rails・SQL・Git・GitHub・AWS(S3)
 ### measurementsテーブル  
 
 | Column        | Type       | Options           |  
-| --------------| -----------｜------------------｜  
+| ------------- | -----------｜------------------｜  
 | date          | date       | null: false       |  
 | timezone      | string     | null: false       |  
 | value         | integer    | null: false       |  
